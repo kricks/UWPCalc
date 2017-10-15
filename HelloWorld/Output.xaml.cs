@@ -26,5 +26,14 @@ namespace HelloWorld
         {
             this.InitializeComponent();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            MainPage.Info parameters = (MainPage.Info)e.Parameter;
+
+        }
+
     }
 }

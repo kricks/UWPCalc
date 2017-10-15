@@ -27,19 +27,36 @@ namespace HelloWorld
         public MainPage()
         {
             this.InitializeComponent();
+
         }
 
-        public static void Calculation()
+        public class Info
         {
-            double width, height, woodLength, glassArea;
-            string widthString, heightString;
-
+            public string width { get; set; }
+            public string height { get; set; }
+            public double woodLength { get; set; }
+            public double glassArea { get; set; }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+           // double width, height, woodLength, glassArea;
+
+            Info parameters = new Info();
+
+
+            parameters.width = txtWidth.Text;
+
+            parameters.height = txtWidth.Text;
+
+
+           // woodLength = 2 * (width * height) * 3.25;
+
+            //glassArea = 2 * (width * height);
+
+            this.Frame.Navigate(typeof(BlankPage1), parameters );
         }
+
 
     }
 }
